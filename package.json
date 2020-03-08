@@ -37,5 +37,7 @@
   "prettier": {
     "singleQuote": true,
     "printWidth": 120
-  }
+  },
+  "engines": { "node": "12.x" }
+
 }
