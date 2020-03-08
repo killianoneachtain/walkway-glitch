@@ -1,0 +1,106 @@
+<section class="ui raised segment">
+    <table class="ui basic table">
+        <thead>
+            <tr style="font-style: italic; background-color: lightgray">
+                <th><h2>Name</h2></th>
+                <th><h2>Email</h2></th>
+                <th><h2>User ID</h2></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><h3>{{user.firstName}} {{user.lastName}}</h3></td>
+            <td><h3>{{user.email}}</h3></td>
+            <td><h3>{{user._id}}</h3></td>
+            <td><div class="ui olive test icon button">Reset Password</div>
+                <div class="ui small mini modal">
+                    <i class="close icon"></i>
+                    <div class="ui icon header">
+                        <i class="edit icon"></i>
+                        <h1>Reset Password for {{user.firstName}} {{user.lastName}}?</h1>
+                    </div>
+                    <div class="content">
+                        <form class="ui form" action="/viewUser/{{user._id}}" method="POST">
+                            <div class="required field" style="padding: 15px">
+                                <label>New Password</label>
+                                <input type="password" name="new_password" id="new" required>
+                                <br>
+                                <br>
+                                <label>Confirm Password</label>
+                                <input type="password" name="confirm_password" id="confirm" required>
+                                <br>
+                                <br>
+                                <input type="checkbox" onclick="togglePassword()">Show Passwords
+                            </div>
+                                <button class="ui green button" type="submit">Submit</button>
+                            <button class="ui red button" type="reset">Reset</button>
+                        </form>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        {{> error}}
+    </table>
+    <table class="ui basic table">
+        <tr>
+            <td><h3>Total Number of Walkways : {{ POI_total}} </h3></td>
+            <td><h3>Total Number of Images: {{total_images}}</h3></td>
+        </tr>
+    </table>
+</section>
+
+<section class="ui raised segment">
+    <div class="ui grid">
+        <article class="sixteen wide column">
+            <table class="ui sortable celled striped table">
+                <thead>
+                <tr>
+                    <th class="sorted ascending">Trail Name</th>
+                    <th>Type</th>
+                    <th>Number of Images</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each walkways}}
+                    <tr>
+                        <td>{{trailname}}</td>
+                        <td> {{trailtype}} </td>
+                        <td>{{ images.length }}</td>
+                        <td class="center aligned"><a href="/deleteTrail/{{_id}}">
+                            <i class="red trash alternate icon"></i></a></td>
+
+                {{/each}}
+                </tr>
+                </tbody>
+            </table>
+
+        </article>
+    </div>
+</section>
+
+<script>
+    $('.mini.modal')
+            .modal('attach events', '.test.button', 'show')
+    ;
+
+    $('table').tablesort();
+
+    function togglePassword() {
+        var x = document.getElementById("new");
+        var y = document.getElementById("confirm");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        if (y.type === "password") {
+            y.type = "text";
+        } else {
+            y.type = "password";
+        }
+    };
+
+</script>

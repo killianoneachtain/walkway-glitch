@@ -1,0 +1,22 @@
+<section class="ui raised segment">
+    <div>
+    <h3> Total Number of Images : {{total_images}} </h3>
+    <h3> Total Number of Assets on <a href="https://www.cloudinary.com">Cloudinary</a>: {{total_resources}}</h3>
+    <!--<a class="ui big blue button"
+       href="https://cloudinary.com/console/c-2d0dc7dff6bf1d27d6696694538c11/reports">View Cloudinary Reports</a>-->
+    <table class="ui celled striped padded table" style="border-radius: 10px">
+        <thead>
+        <tr><th colspan="2"><h2>Current Cloudinary Rate Limits</h2></th></tr>
+        </thead>
+        <tr>
+            <td><h3>Rate Limit Allowed</h3></td><td><h3>{{rates.[0]}}</h3></td>
+        </tr>
+        <tr>
+            <td class="red cell"><h3>Rate Limit Remaining</h3></td><td><h3 style="color: red;font-weight: bold">{{rates.[1]}}</h3></td>
+        </tr><tr>
+        <td><h3>Rate Limit Reset At</h3></td><td><h3>{{rates.[2]}}</h3></td>
+    </tr>
+
+    </table>
+    <br></div>
+</section>

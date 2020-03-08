@@ -1,0 +1,62 @@
+{{> welcomemenu _id="signup" }}
+
+<section class="ui raised segment">
+        <div class="ui grid">
+            <div class="ui ten wide column">
+                <div class="ui stacked fluid form segment">
+                    <form action="/signup" method="POST" id="signup">
+                        <h3 class="ui header">Register</h3>
+                        <div class="two fields">
+                            <div class="field {{#if errorz.firstName}}error{{/if}}">
+                                <label>First Name</label> <input value="{{values.firstName}}" type="text" name="firstName"/>
+                            </div>
+                            <div class="field {{#if errorz.lastName}}error{{/if}}">
+                                <label>Last Name</label> <input value="{{values.lastName}}" type="text" name="lastName"/>
+                            </div>
+                        </div>
+                        <div class="field {{#if errorz.email}}error{{/if}}">
+                            <label>Email</label>
+                            <input value="{{values.email}}" type="text" name="email"/></div>
+                        <div class="required field {{#if errorz.new_password}}error{{/if}}">
+                            <label>Password</label>
+                            <input type="password" name="new_password" id="new"required>
+                        </div>
+                        <div class="required field {{#if errorz.confirm_password}}error{{/if}}">
+                            <label>Confirm Password</label>
+                            <input type="password" name="confirm_password" id="confirm" required>
+                        </div>
+                        <div>
+                            <button class="ui green submit button"> Submit</button>
+                        </div>
+                    </form>
+                    {{> error}}
+                </div>
+                <div class="ui small checkbox">
+                <input type="checkbox" name="showpassowrds" onclick="togglePassword()">
+                <label>Show Passwords</label>
+            </div><br><br>
+            </div>
+            <aside class="ui six wide column"><img src="images/family.png" class="ui image"/></aside>
+        </div>
+
+    </section>
+
+<script>
+    function togglePassword() {
+        var x = document.getElementById("new");
+        var y = document.getElementById("confirm");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        if (y.type === "password") {
+            y.type = "text";
+        } else {
+            y.type = "password";
+        }
+    }
+</script>
+
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_password -->
+

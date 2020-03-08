@@ -1,0 +1,112 @@
+<!-- Modal code has been taken from https://www.w3schools.com/howto/howto_css_modals.asp
+                                       https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+
+     Original code from website above, and adapted by Killian O'Neachtain, 20023634   -->
+
+<style>
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 5px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+<!-- Trigger/Open The Modal -->
+
+<div><i id="myBtn" class="big icons"><i class="big olive images icon link"></i><i class="green small bottom right corner add icon"></i></i></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content" style="text-transform: none">
+        <span class="close">&times;</span>
+            <div class="ui horizontal card">
+                <div class="header">Image Upload</div>
+                <form class="ui form" action="/uploadfile/{{trail._id}}" method="POST" enctype="multipart/form-data">
+                    <div class="uk-margin">
+                        <label class="header">Select Image</label>
+                        <div class="uk-form-controls">
+                            <input type="file" class="uk-input" name="imagefile" accept="image/jpg, image/png, image/jpeg">
+                        </div>
+                    </div>
+                    <div class="ui right floated green button">
+                        <input type="submit" value="Upload for {{trail.trailname}}" class="ui green button">
+                    </div>
+                </form>
+            </div>
+</div>
+
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+</script>
+
+</body>
+
+<!-- Modal code has been taken from https://www.w3schools.com/howto/howto_css_modals.asp
+                                    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+                                    -->

@@ -1,0 +1,40 @@
+{
+  "name": "walkway",
+  "version": "1.0.0",
+  "description": "an application to catalogue walks in ireland",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "walk",
+    "assignment1"
+  ],
+  "author": "Killian O'Neachtain",
+  "license": "ISC",
+  "dependencies": {
+    "@google/maps": "^1.1.0",
+    "@googlemaps/google-maps-services-js": "^2.1.2",
+    "@hapi/boom": "^9.0.0",
+    "@hapi/cookie": "^11.0.0",
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/joi": "^17.1.0",
+    "@hapi/vision": "^6.0.0",
+    "cloudinary": "^1.19.0",
+    "diff": "^4.0.2",
+    "dotenv": "^8.2.0",
+    "handlebars": "^4.7.3",
+    "lodash": "^4.17.15",
+    "mais-mongoose-seeder": "^1.0.7",
+    "mongoose": "^5.8.11"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
+  }
+}

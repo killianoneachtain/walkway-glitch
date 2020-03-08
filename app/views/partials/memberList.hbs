@@ -1,0 +1,75 @@
+<table class="ui very basic striped table">
+    <thead>
+    <tr>
+        <th class="fifteen wide"><h2 style="color: olive">MEMBERS</h2></th>
+        <th class="one wide"></th>
+    </tr>
+    </thead>
+</table>
+
+
+<div class="ui grid" style="grid-column-gap: 0px; padding: 0px;">
+    <div class="sixteen wide column" style="padding: 0px; text-transform: uppercase">
+        <table class="ui very basic striped table">
+            <tbody>
+            {{#each members}}
+                <td style="font-size: 120%"><a href="/viewUser/{{_id}}" style="font-weight: bold">
+                    <h2>{{firstName}} {{lastName}}</h2></a><p>
+                    <div class="ui large label">
+                        Email :
+                        <div class="detail">{{email}}</div>
+                    </div>
+                    <div class="ui large label">
+                        User ID :
+                        <div class="detail">{{_id}}</div>
+                    </div>
+                </td>
+                <td class="center aligned">
+                    <a href="/deleteUser/{{_id}}"><i class="big red trash alternate outline icon"></i></a>
+                </td>
+            </tbody>
+            {{/each}}
+                {{> error}}
+        </table>
+    </div>
+</div>
+
+
+
+
+<!--
+<section class="ui raised segment" style="column-gap: 0px;grid-column-gap: 0px">
+    <h2> Welcome {{user.firstName}} {{user.lastName}} to Walkways Administration.</h2>
+    <h3> Total Number of Users: {{total_users}}</h3>
+    <table class="ui very basic striped table">
+        <thead>
+        <tr>
+            <th class="fifteen wide"><h2>MEMBER</h2></th>
+            <th class="one wide"></th>
+        </tr>
+        </thead>
+    </table>
+
+    <div class="ui grid" style="grid-column-gap: 0px; padding: 0px;">
+        <div class="sixteen wide column" style="padding: 0px; text-transform: uppercase">
+            <table class="ui very basic striped table">
+            <tbody>
+                {{#each members}}
+                <td style="font-size: 120%"><a href="/viewUser/{{_id}}" style="font-weight: bold">
+                    <h2>{{firstName}} {{lastName}}</h2></a><p>
+                    <div class="ui large label">
+                        Email :
+                        <div class="detail">{{email}}</div>
+                    </div>
+                </td>
+                <td class="center aligned">
+                {{> confirm_delete_modal}}
+                </td>
+                </tbody>
+                {{/each}}
+                {{> error}}
+            </table>
+        </div>
+    </div>
+</section> -->
+

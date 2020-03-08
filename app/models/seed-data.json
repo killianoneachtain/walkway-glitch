@@ -1,0 +1,438 @@
+{
+  "users": {
+    "_model": "User",
+    "homer": {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secretP@ssw0rd",
+      "type": "user",
+      "trailtypes": [ "Loop" ]
+    },
+    "marge": {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secretP@ssw0rd",
+      "type": "admin"
+    },
+    "killian": {
+      "firstName": "Killian",
+      "lastName": "O'Neachtain",
+      "email": "killianoneachtain@hotmail.com",
+      "password": "secretP@ssw0rd",
+      "type": "user",
+      "trailtypes": [ "Loop", "Linear" ]
+    }
+  },
+  "trails": {
+    "_model": "Trail",
+    "one":    {
+          "creator": "->users.killian",
+          "grade": [
+            "Easy", "Moderate"
+          ],
+          "county": "Waterford",
+          "trailname": "Back Strand Walk",
+          "trailtype": "Loop",
+          "traillength": 1.5,
+          "time": "01:05",
+          "nearesttown": "Tramore",
+          "description": "Best walk in Tramore",
+          "startcoordinates": {
+            "latitude": 52.159796,
+            "longitude": -7.137537
+          }
+        },
+    "two":   {
+          "creator": "->users.killian",
+          "grade": [
+            "Moderate"
+          ],
+          "county": "Waterford",
+          "trailname": "Metal Man",
+          "trailtype": "Linear",
+          "traillength": 2.5,
+          "time": "01:15",
+          "nearesttown": "Tramore",
+          "description": "Walk Around Newtown",
+          "startcoordinates": {
+            "latitude": 52.159796,
+            "longitude": -7.137537
+          }
+        },
+    "three":
+      {
+        "grade": [
+          "Easy"
+        ],
+        "creator": "->users.killian",
+        "county": "Waterford",
+        "trailname": "Doneraile Walk",
+        "trailtype": "Linear",
+        "traillength": 3.5,
+        "time": "01:05",
+        "nearesttown": "Tramore",
+        "description": "Best walk in Tramore",
+        "startcoordinates": {
+          "latitude": 52.159796,
+          "longitude": -7.137537
+        }
+      },
+    "four":
+      {
+        "creator": "->users.homer",
+        "grade": [
+          "Easy"
+        ],
+        "county": "Waterford",
+        "trailname": "Back Strand",
+        "trailtype": "Loop",
+        "traillength": 6.3,
+        "time": "02:45",
+        "nearesttown": "Tramore",
+        "description": "Best walk in Tramore",
+        "startcoordinates": {
+          "latitude": 52.159796,
+          "longitude": -7.137537
+        }
+      },
+    "five":
+      {
+        "creator": "->users.homer",
+        "grade": [
+          "Easy"
+        ],
+        "county": "Waterford",
+        "trailname": "Metal Man Loop",
+        "trailtype": "Loop",
+        "traillength": 4.5,
+        "time": "01:35",
+        "nearesttown": "Tramore",
+        "description": "Walk Around Newtown",
+        "startcoordinates": {
+          "latitude": 52.159796,
+          "longitude": -7.137537
+        }
+      },
+    "six":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Cork",
+      "trailname": "Sheep's Head - Cahergal Loop",
+      "trailtype": "Loop",
+      "traillength": 7.8,
+      "time": "03:15",
+      "nearesttown": "Bantry",
+      "description": "This loop traverses the width of the narrow Sheep’s Head Peninsula on laneways, tracks and mountain paths, passing through the remains of mine buildings at Crimea and close to cliffs, including a short cliff path with rope handrail. There are fine views towards the neighbouring Beara and Mizen Peninsulas.",
+      "startcoordinates": {
+        "latitude": 51.562142,
+        "longitude": -9.764004
+      }
+    },
+    "seven":
+    {
+      "creator": "->users.killian",
+      "grade": [
+        "Modearte"
+      ],
+      "county": "Dublin",
+      "trailname": "Ticknock - Fairy Castle",
+      "trailtype": "Loop",
+      "traillength": 5.5,
+      "time": "01:45",
+      "nearesttown": "Dundrum",
+      "description": "This is a lovely looped walk on forest road and path through the Three Rock Wood with wonderful views over Dublin from Three Rock Mountain and Fairy Castle.",
+      "startcoordinates": {
+        "latitude": 53.255632,
+        "longitude": -6.251329
+      }
+    },
+    "eight":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Very Difficult"
+      ],
+      "county": "Wicklow",
+      "trailname": "Spinc & Wicklow Way - Glendalough",
+      "trailtype": "Loop",
+      "traillength": 11.2,
+      "time": "04:15",
+      "nearesttown": "Laragh",
+      "description": "This walk ascends steeply on a path up by Poulanass Waterfall to a boardwalk and wooden steps leading to a spectacular viewing point overlooking the Upper Lake. It takes you in a circle under Lugduff Mountain before winding down through the valley on forest road. There are some tree roots underfoot.",
+      "startcoordinates": {
+        "latitude": 53.004904,
+        "longitude": -6.346000
+      }
+    },
+    "nine":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Cavan",
+      "trailname": "Dun a Ri - River Walk",
+      "trailtype": "Loop",
+      "traillength": 3.1,
+      "time": "01:35",
+      "nearesttown": "Corgarry",
+      "description": "A lovely River Walk through the Cavan Forest.",
+      "startcoordinates": {
+        "latitude": 53.919080,
+        "longitude": -6.792333
+      }
+    },
+    "ten":
+    {
+      "creator": "->users.killian",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Cavan",
+      "trailname": "Dun a Ri - River Walk",
+      "trailtype": "Loop",
+      "traillength": 3.1,
+      "time": "01:35",
+      "nearesttown": "Corgarry",
+      "description": "A lovely River Walk through the Cavan Forest.",
+      "startcoordinates": {
+        "latitude": 53.919080,
+        "longitude": -6.792333
+      }
+    },
+    "eleven":
+    {
+      "creator": "->users.killian",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Clare",
+      "trailname": "Ballinruan Loop",
+      "trailtype": "Loop",
+      "traillength": 10.50,
+      "time": "03:45",
+      "nearesttown": "Ballinruan",
+      "description": "This trail offers pleasant walking on minor roads, forest tracks, forest and bog paths through a variety of landscape, including farmland, evergreen and deciduous woodland and blanket bog. The expansive bogland at the highest point is a good example of cutover and recovering blanket bog and also provides extensive views in all directions including towards the Slieve Aughty Mountains and the Burren while the Hen Harrier and Merlin are resident in the general area.",
+      "startcoordinates": {
+        "latitude": 52.953432,
+        "longitude": -8.828016
+      }
+    },
+    "twelve":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Donegal",
+      "trailname": "Glencolmcille - Drum loop",
+      "trailtype": "Loop",
+      "traillength": 13.0,
+      "time": "04:10",
+      "nearesttown": "Glencolmcille",
+      "description": "The stretch of coastline between Slieve League and Slieve Tooey in southwest Donegal is a fine spot for walkers eager to breakaway from the trappings of modern living. The entire 35km coastline bristles with jagged rock pinnacles and soaring cliffs and, nestled in the midst of all this glorious scenery, is the village of Glencolmcille.\n\nWonderfully remote, Glencolmcille began as a settlement for Neolithic peoples, and the area is littered with Megalithic tombs, so insights into the country’s heritage are plentiful.\n\nThere are plenty of walks that start and finish at St Columba’s Church in the village, but two of the best are the Drum Loop and the shorter Tower Loop. Both take the same route, however, the Drum Loop takes a detour only to join the Tower Loop again at a later stage.",
+      "startcoordinates": {
+        "latitude": 54.710066,
+        "longitude": -8.721229
+      }
+    },
+    "thirteen":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Easy"
+      ],
+      "county": "Cork",
+      "trailname": "Castlemartyr - Mitchell's Wood Loop",
+      "trailtype": "Loop",
+      "traillength": 2.4,
+      "time": "00:45",
+      "nearesttown": "Castlemartyr",
+      "description": "This Loop follows forest roads and tracks in this former estate, passing close to the Kiltha River, a Folly and the Camellia Gardens.",
+      "startcoordinates": {
+        "latitude": 51.915866,
+        "longitude": -8.062202
+      }
+    },
+    "fourteen":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Moderate", "Strenuous"
+      ],
+      "county": "Kerry",
+      "trailname": "Shannon Way",
+      "trailtype": "Linear",
+      "traillength": 35.4,
+      "time": "09:30",
+      "nearesttown": "Ballybunion",
+      "description": "Starting from Ballybunion reaching Knockanore the views are extensive of the Wild Atlantic Way the trail enters on the crown of the hill with the vista of the surrounding areas can only be described as Breath - Taking with the Monastic Scattery Island in the distance and the Shannon Estuary in full view this adds to the trail with wild flora and fauna in abundance.\n\nThe tranquility along this trail is so special and under foot the trail is within the natural area of focus. As this area is so special a Leave No Trace appliess on walking this section. From The Hill to the road no litter was observed. This made The Shannon Way special.\n\nThis trail is well worth walking for total enjoyment of our natural areas and viewing our wildlife. This is a great natural Amenity and worth walking.",
+      "startcoordinates": {
+        "latitude": 51.915866,
+        "longitude": -8.062202
+      }
+    },
+    "fifteen":
+    {
+      "creator": "->users.killian",
+      "grade": [
+        "Easy", "Moderate", "Wheelchair and Buggy Accessible"
+      ],
+      "county": "Wexford",
+      "trailname": "Rosslare Harbour Village Trail",
+      "trailtype": "Loop",
+      "traillength": 2.9,
+      "time": "00:50",
+      "nearesttown": "Rosslare",
+      "description": "This walk offers a cliff walk section, a memorial garden, an exploration of a wonderful gem of a Secret Garden in the Village Park and parts of the village itself, with points of historical and maritime interest along the way and a variety of scenery including stunning views from the cliff walk.",
+      "startcoordinates": {
+        "latitude": 52.247604,
+        "longitude": -6.331684
+      }
+    },
+    "sixteen":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Offaly",
+      "trailname": "Glenregan Loop",
+      "trailtype": "Loop",
+      "traillength": 11.0,
+      "time": "03:15",
+      "nearesttown": "Kinnity",
+      "description": "This trail includes a gentle climb and gradual descent through narrow forest trails with a section along the Camcor River. From the highest part at the site of Glinsk Castle views are of Dossaun Mountain and Carroll’s Hill and a lime kiln is passed.",
+      "startcoordinates": {
+        "latitude": 53.091633,
+        "longitude":  -7.684729
+      }
+    },
+    "seventeen":
+    {
+      "creator": "->users.killian",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Cork",
+      "trailname": "Sheeps Head - Mass Path",
+      "trailtype": "Linear",
+      "traillength": 2.0,
+      "time": "02:15",
+      "nearesttown": "Kilcrohane",
+      "description": "This walk follows path, minor road and open mountain as it crosses over the ridge from one side of the Sheep's Head Peninsula to the other, rising to a height of just over 200m and giving spectacular views of both Bantry Bay and Dunmanus Bay with the Beara and Mizen Head peninsulas beyond.",
+      "startcoordinates": {
+        "latitude": 51.622558,
+        "longitude": -9.665386
+      },
+      "endcoordinates": {
+        "latitude": 51.608086,
+        "longitude": -9.664904
+      }
+    },
+    "eighteen":
+    {
+      "creator": "->users.killian",
+      "grade": [
+        "Easy"
+      ],
+      "county": "Cork",
+      "trailname": "Beacon Walk",
+      "trailtype": "Linear",
+      "traillength": 3.3,
+      "time": "01:15",
+      "nearesttown": "Baltimore",
+      "description": "This very enjoyable trail heads south on road from the pier around the Cove to beneath Baltimore Beacon with stunning views of spectacular West Cork scenery including Sherkin and harbour.",
+      "startcoordinates": {
+        "latitude": 51.482246,
+        "longitude": -9.374938
+      },
+      "endcoordinates": {
+        "latitude": 51.473731,
+        "longitude": -9.387866
+      }
+    },
+    "nineteen":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Moderate"
+      ],
+      "county": "Cork",
+      "trailname": "Beacon Walk",
+      "trailtype": "Loop",
+      "traillength": 3.3,
+      "time": "01:15",
+      "description": "This very enjoyable trail heads south on road from the pier around the Cove to beneath Baltimore Beacon with stunning views of spectacular West Cork scenery.",
+      "startcoordinates": {
+        "latitude": 51.482246,
+        "longitude": -9.374937
+      }
+    },
+    "twenty":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Easy"
+      ],
+      "county": "Waterford",
+      "trailname": "Ardmore Cliff Walk",
+      "trailtype": "Out and Back",
+      "traillength": 4.1,
+      "time": "01:15",
+      "nearesttown": "Ardmore",
+      "description": "This walk brings you on cliff-top paths, minor roads and laneways past Early Christian St Declan's Well, Ardmore Round Tower (one of the best preserved in Ireland) 12th Century Cathedral and a lookout post with a variety of flora, fauna and birdlife (coastal birds, Rock Pipits, Pheasant, Kestrel, Peregrine Falcon) and some stunning coastal scenery.",
+      "startcoordinates": {
+        "latitude": 51.482246,
+        "longitude": -9.374938
+      }
+    },
+    "twenty one":
+    {
+      "creator": "->users.killian",
+      "grade": [
+        "Easy", "Wheelchair and Buggy Accessible"
+      ],
+      "county": "Waterford",
+      "trailname": "Waterford Greenway",
+      "trailtype": "Linear",
+      "traillength": 46.5,
+      "time": "09:15",
+      "nearesttown": "Waterford",
+      "description": "A stunning walk along the old railway line, connecting Waterford City and Dungarvan",
+      "startcoordinates": {
+        "latitude": 52.269630,
+        "longitude": -7.137472
+      },
+      "endcoordinates": {
+        "latitude": 52.091675,
+        "longitude": -7.615516
+      }
+    },
+    "twenty two":
+    {
+      "creator": "->users.homer",
+      "grade": [
+        "Moderate", "Strenuous"
+      ],
+      "county": "Waterford",
+      "trailname": "Nire Valley Trails - Coumlara loop",
+      "trailtype": "Loop",
+      "traillength": 6.5,
+      "time": "03:45",
+      "nearesttown": "Ballymacarbry",
+      "description": "This walk takes you on sand road, roadway, track and mountain terrain heading towards the lower slopes of the Comeragh Mountains, crossing the Nire River, a stream flowing from Coumlara, the shoulder of Carrignagower and on to The Gap, returning along a mountain track to the trailhead. The area is beautiful and remote with scenic views.",
+      "startcoordinates": {
+        "latitude": 52.266946,
+        "longitude": -7.595808
+      }
+    }
+  }
+}
+
+

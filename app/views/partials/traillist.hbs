@@ -1,0 +1,51 @@
+<section class="ui raised segment">
+    <div class="ui grid">
+        <div class="four wide column"></div>
+        <div class="eight wide column">
+            <img src="images/poimap.png" class="ui centered middle aligned image">
+        </div>
+        <article class="sixteen wide column">
+            <table class="ui sortable celled striped olive table">
+                <thead>
+                <tr>
+                    <th class="sorted ascending">Trail Name</th>
+                    <th>County</th>
+                    <th>Type</th>
+                    <th>Length (Km)</th>
+                    <th>Time</th>
+                    <th>Grade</th>
+                    <th class="center aligned">Delete</th>
+                    <th class="center aligned">Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each walkways}}
+                    <tr>
+                        <td><a href="/viewPOI/{{_id}}"> {{trailname}} </a></td>
+                        <td> {{county}} </td>
+                        <td> {{trailtype}} </td>
+                        <td> {{traillength}} </td>
+                        <td> {{time}} </td>
+                        <td> {{grade}} </td>
+                        <td class="center aligned"><a href="/deleteTrail/{{_id}}">
+                            <i class="olive trash alternate icon"></i></a></td>
+                        <td class="center aligned"><a href="/editTrail/{{_id}}">
+                            <i class="olive wrench icon"></i></a></td>
+
+                {{/each}}
+
+                {{> error }}
+
+                </tr>
+                </tbody>
+            </table>
+
+        </article>
+    </div>
+</section>
+
+
+
+<script>
+    $('table').tablesort()
+</script>

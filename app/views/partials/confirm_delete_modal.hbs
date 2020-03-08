@@ -1,0 +1,30 @@
+<div class="ui grey tertiary test icon button"><i class="big red trash alternate outline icon"></i></div>
+<div id="{{_id}}" class="ui small basic test modal">
+    <i class="close icon"></i>
+    <div class="ui icon header">
+        <i class="trash icon"></i>
+        Delete User from Walkways?
+    </div>
+    <div class="content">
+        <h2>Are you sure you want to delete {{firstName}} {{lastName}} ?</h2>
+        <h3>Email : {{email}}</h3>
+    </div>
+    <div class="actions">
+        <div class="ui red basic cancel inverted button">
+            <i class="remove icon"></i>
+            Cancel
+        </div>
+        <div class="ui green ok inverted button" href="/deleteUser/{{_id}}">
+            <i class="checkmark icon"></i>
+            Approve
+        </div>
+    </div>
+</div>
+</td>
+</tr>
+<script>
+    $('ui.test.modal')
+            .modal('setting', 'closable', false)
+            .modal('attach events', '.test.button', 'show')
+    ;
+</script>

@@ -1,0 +1,16 @@
+<h1>Gallery for {{trail.trailname}}</h1>
+<br>
+    <div class="ui three stackable cards">
+        {{#each images}}
+            {{> card}}
+        {{/each}}
+         <br>
+    </div>
+
+
+
+<script>
+    $('.ui.modal')
+            .modal('show')
+    ;
+</script>

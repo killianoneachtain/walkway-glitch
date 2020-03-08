@@ -1,0 +1,73 @@
+<section class="ui raised segment">
+    <div class="ui grid">
+        <div class="twelve wide column">
+            {{> map }}
+        </div>
+    </div>
+</section>
+
+<section class="ui raised segment">
+    <div class="eleven wide column">
+    <div class="ui grid">
+        <table class="ui large collapsing table">
+            <tbody>
+                <tr>
+                    <td class="blue" style="font-size: large">{{trail.trailname}} Overview Details</td>
+                    <td class="blue"><a href="/editTrail/{{trail._id}}">
+                        <i class="olive wrench icon"></i>Edit Trail</a></td>
+                </tr>
+                <tr>
+                    <td class="olive">Grade</td>
+                    <td>{{trail.grade}}</td>
+                </tr>
+                <tr>
+                    <td class="olive">Trail Type</td>
+                    <td>{{trail.trailtype}}</td>
+                </tr>
+                <tr>
+                    <td>County</td>
+                    <td>{{trail.county}}</td>
+                </tr>
+                <tr>
+                    <td>Trail Length (Km)</td>
+                    <td>{{trail.traillength}}</td>
+                </tr>
+                <tr>
+                    <td>Walking Time</td>
+                    <td>{{trail.time}}</td>
+                </tr>
+                <tr>
+                    <td>Nearest Town</td>
+                    <td>{{trail.nearesttown}}</td>
+                </tr>
+                <tr>
+                    <td>Start Coordinates (lat, long) : </td>
+                    <td>{{trail.startcoordinates.latitude}}, {{trail.startcoordinates.longitude}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="one wide column"></div>
+        <div class="four wide column" style="font-size: 120%">
+            <article>Description of Trail:<br><br>
+            {{trail.description}}</article>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="ui raised segment">
+    <div class="ui grid">
+        <table class="ui fixed table">
+            <tr>
+                <td>{{> POIgallery}}</td>
+            </tr>
+            <tr>
+                <td> {{> upload_modal}}</td>
+            </tr>
+        </table>
+    </div>
+</section>
+<br>
+<br>
+
